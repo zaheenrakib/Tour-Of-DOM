@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Tour Of DOM</title>
+    <style>
+        .fruits-Container li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="welcome" >WelCome To My DOM</h1>
+    </header>
+    <main id="main-container">
+        <h1>My Awesome DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates reprehenderit numquam fuga quasi quos saepe, tempore necessitatibus, voluptatem eaque ea officiis. Culpa ullam iure laudantium totam esse officia, error optio aliquam, itaque explicabo illo. Praesentium mollitia, cumque quod beatae asperiores recusandae vel dignissimos quisquam reiciendis, quo nisi. Corporis, minima amet!</p>
+        <section>
+            <h1>My Awesome DOM De BABA</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayest</li>
+                <li>BonoBash</li>
+                <li>DOM Is Very Important</li>
+            </ul>
+        </section>
+        <section class="fruits-Container">
+            <h1 id="fruits-title" class="blue-bg text">Fruits I Like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Places I Like to Visit</h1>
+            <ul id="places-list">
+                <li class="important-places">Sondore Bon</li>
+                <li class="important-places"> bandarbon</li>
+                <li class="important-places"> katabon</li>
+                <li class="other-places">Shalbon</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/stylesInJs.js"></script>
+    
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for( const li of liCollection){
+           // console.log(li.innerText);
+        }
+        //option 1 : getElmentsByTagByClassName
+        const allHeading = document.getElementsByTagName('h1');
+        for(const h1 of allHeading){
+            // console.log(h1.innerText);
+        }
+        // option 2
+        const frutsTitle = document.getElementById('fruts-title')
+        //Option 3: getElementsByClassName
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            // console.log(place.innerText);
+        }
+        //Query Selector
+        //Query selectorAll
+        const someLi = document.querySelectorAll(".fruits-Container li ");
+        // console.log(someLi);
+    </script>
+    
+</body>
+</html>
